@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
-    "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
