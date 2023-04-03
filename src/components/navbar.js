@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import dark from "../svg/dark_mode.svg";
+
 
 const Navbar = () => {
   return (
