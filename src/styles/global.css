@@ -2,27 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .dark_theme {
-  background-color: rgb(22, 22, 22);
-  color: rgb(214, 214, 214);
+  @apply bg-primary text-white;
 }
 
 .light_theme {
-  background-color: rgb(214, 214, 214);
-  color: rgb(22, 22, 22);
 }
 
 @media (prefers-color-scheme: dark) {
   .theme {
-    background-color: rgb(22, 22, 22);
-    color: rgb(214, 214, 214);
+    @apply bg-primary text-white;
+  }
+  #system_theme {
+    @apply fill-white;
   }
 }
 
 @media (prefers-color-scheme: light) {
   .theme {
-    background-color: rgb(214, 214, 214);
-    color: rgb(22, 22, 22);
+  }
+  #system_theme {
+    @apply fill-black;
   }
 }
