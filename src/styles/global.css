@@ -10,6 +10,10 @@
 .light_theme {
 }
 
+body {
+  transition: all ease 500ms;
+}
+
 @media (prefers-color-scheme: dark) {
   .theme {
     @apply bg-primary text-white;
