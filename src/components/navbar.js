@@ -1,25 +1,22 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
+import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-[65vw] m-auto text-white flex flex-row justify-between  text-xl">
-      <Link to="/" className="m-3 uppercase font-Alkatra ">
+    <nav className="md:max-w-[65vw] m-auto p-3 flex flex-row justify-between items-center  text-base md:text-xl ">
+      <Link to="/" className="">
         Ionut
       </Link>
-      <div className="m-3">
-        <Link className="ml-6  hover:underline " to="/about">
+      <div className="flex justify-center items-center">
+        <Link className="ml-2 " to="/about">
           About
         </Link>
-        <Link className="ml-6  hover:underline " to="/about">
-          Blog
-        </Link>
-        <Link className="ml-6  hover:underline " to="/about">
+
+        <Link className="ml-2 " to="/about">
           Projects
         </Link>
-        {/* fix svg issue */}
-        {/* <img className="inline rounded-full hover:bg-white " src={dark} alt="" /> */}
+        <ThemeToggler />
       </div>
     </nav>
   );

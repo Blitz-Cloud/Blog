@@ -3,9 +3,9 @@ import Navbar from "./navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="text-white">
+    <div className="theme" id="body">
       <Navbar />
-      {children}
+      {/* {children} */}
       {/* footer */}
     </div>
   );
