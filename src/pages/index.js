@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const IndexPage = () => {
   return (
     <Layout>
-      <header className="md:max-w-[65vw] m-auto h-[60vh] md:h-[90vh] text-center flex flex-col justify-center items-center">
+      <header className="h-[60vh] md:h-[90vh] p-4 dark:bg-primary dark:text-white text-center flex flex-col justify-center items-center ">
         <h1 className="font-Alkatra font-bold text-4xl md:text-5xl m-6 tracking-wider">
           Hi, I`m Ionut!
         </h1>

@@ -4,20 +4,28 @@ import { useState } from "react";
 const ThemeToggler = () => {
   const [theme, setTheme] = useState(0);
   function themeToggle() {
-    const body = document.getElementById("body");
+    const body = document.querySelector("body");
     const themeBtn = document.querySelector("button").children;
+
     let i = theme;
     themeBtn[i].classList.toggle("hidden");
-
+    //de schimbat in switch
     switch (i) {
       case 0:
-        body.classList = "light_theme";
+        body.classList = "";
+        console.log("light theme");
         break;
       case 1:
-        body.classList = "dark_theme";
+        body.classList = "dark";
+        console.log("dark theme");
         break;
       case 2:
-        body.classList = "theme";
+        console.log("auto");
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          body.classList = "dark";
+        } else {
+          body.classList = "";
+        }
         break;
     }
     if (i === 2) {
@@ -27,21 +35,19 @@ const ThemeToggler = () => {
       i++;
       setTheme(theme + 1);
     }
-
     themeBtn[i].classList.toggle("hidden");
   }
   return (
     <button className="" onClick={themeToggle}>
       <div
         id="system_theme"
-        className="mx-3 p-[4px]  hover:bg-white/20   rounded-full "
+        className="mx-3 p-[4px] hover:bg-white/20 hover:fill-white fill-[#94a3b8] rounded-full "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="20"
           viewBox="0 96 960 960"
           width="20"
-          className="hover:fill-white"
         >
           <path d="M273 936v-73l47-47H140q-24 0-42-18t-18-42V276q0-24 18-42t42-18h680q24 0 42 18t18 42v480q0 24-18 42t-42 18H640l48 47v73H273ZM140 756h680V276H140v480Zm0 0V276v480Z" />
         </svg>
@@ -61,14 +67,13 @@ const ThemeToggler = () => {
       </div>
       <div
         id="dark_btn"
-        className="mx-3 p-[4px] fill-[#94a3b8]   hover:bg-white/20  rounded-full hidden"
+        className="mx-3 p-[4px] fill-[#94a3b8] hover:fill-white hover:bg-white/20  rounded-full hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="20"
           viewBox="0 96 960 960"
           width="20"
-          className="hover:fill-white"
         >
           <path d="M480 936q-150 0-255-105T120 576q0-150 105-255t255-105q8 0 17 .5t23 1.5q-36 32-56 79t-20 99q0 90 63 153t153 63q52 0 99-18.5t79-51.5q1 12 1.5 19.5t.5 14.5q0 150-105 255T480 936Zm0-60q109 0 190-67.5T771 650q-25 11-53.667 16.5Q688.667 672 660 672q-114.689 0-195.345-80.655Q384 510.689 384 396q0-24 5-51.5t18-62.5q-98 27-162.5 109.5T180 576q0 125 87.5 212.5T480 876Zm-4-297Z" />
         </svg>
