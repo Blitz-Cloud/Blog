@@ -31,17 +31,17 @@ const IndexPage = () => {
           </div>
           {/* article */}
           <div>
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-lg md:text-4xl font-bold">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </h2>
-            <p className="py-4 text-lg">
+            <p className="py-4 text-base md:text-lg">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Reiciendis corporis et voluptatem vitae sit soluta dicta ipsum
               neque! Magni suscipit neque quae, incidunt eveniet rerum. Possimus
               repellendus vitae ipsa perferendis.
             </p>
             <a
-              className="text-lg py-1 px-3 rounded-md dark:bg-[#feffbe] bg-[#0077B6] text-white  dark:text-black dark:fill-black fill-white tracking-wider inline-flex items-center"
+              className="text-base md:text-lg py-1 px-3 rounded-md dark:bg-[#feffbe] bg-[#0077B6] text-white  dark:text-black dark:fill-black fill-white tracking-wider inline-flex items-center"
               href=""
             >
               Read more
