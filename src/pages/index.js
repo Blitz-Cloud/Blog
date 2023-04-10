@@ -4,20 +4,26 @@ import Layout from "../components/layout";
 const IndexPage = () => {
   return (
     <Layout>
-      <header className="h-[60vh] md:h-[90vh] p-4 dark:bg-primary dark:text-white text-center flex flex-col justify-center items-center ">
-        <h1 className="font-Alkatra font-bold text-4xl md:text-5xl m-6 tracking-wider">
-          Hi, I`m Ionut!
-        </h1>
-        <p className="text-lg md:text-xl sm:max-w-[45vw]">
-          <span className="font-semibold">Student</span> from Romania.
-          <br />
-          I'm passionate about back-end technologies and designing and managing
-          linux server.
-          <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Blanditiis nisi provident expedita, impedit consectetur delectus magni
-          in, sed dolor.
-        </p>
-      </header>
+      <div className="dark:bg-primary dark:text-white text-center">
+        <header className="h-[60vh] md:h-[90vh] p-4 m-auto sm:max-w-[50vw] flex flex-col justify-center items-center">
+          <h1 className="font-Alkatra font-bold text-5xl md:text-6xl my-6 tracking-wider">
+            Hi, I`m Ionut!
+          </h1>
+          <div className="text-xl">
+            <p>
+              <span className="font-semibold">Student</span> from Romania.
+            </p>
+            <p className="m-auto sm:max-w-[90%]">
+              I'm passionate about back-end technologies and designing and
+              managing linux server.
+            </p>
+            <p className="my-3 m-auto sm:max-w-[85%]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis nisi provident expedita.
+            </p>
+          </div>
+        </header>
+      </div>
     </Layout>
   );
 };
