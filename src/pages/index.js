@@ -25,7 +25,7 @@ const IndexPage = () => {
         </header>
       </div>
       <div className="dark:bg-[#0d2739] dark:text-white bg-slate-100 ">
-        <main className="m-auto lg:max-w-[80vw] py-12 px-16">
+        <main className="m-auto lg:max-w-[80vw] py-12 p-4 md:px-16">
           <div className="rounded-full my-3 bg-primary inline-block py-1 px-3 uppercase  text-[#f5f5f5]">
             Latest Post
           </div>
