@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `blog`,
-    siteUrl: `https://www.blitzcloud.me`,
+    title: "Ionut",
+    siteUrl: "https://www.blitzcloud.me",
   },
   plugins: [
     "gatsby-plugin-postcss",

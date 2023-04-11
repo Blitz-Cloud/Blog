@@ -1,4 +1,5 @@
 import * as React from "react";
+import Seo from "../components/seo";
 
 const IndexPage = () => {
   return (
@@ -10,4 +11,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>404</title>;
+export const Head = () => <Seo title="About Me" />;
