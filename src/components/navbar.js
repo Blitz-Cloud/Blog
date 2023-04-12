@@ -4,7 +4,7 @@ import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
   return (
-    <div className="dark:bg-primary dark:text-white bg-white w-[100vw] fixed top-0">
+    <div className="dark:bg-primary dark:text-white bg-white  top-0 sticky ">
       <nav className="md:max-w-[65vw] m-auto p-3 text-lg md:text-xl flex flex-row justify-between items-center   ">
         <Link to="/" className="uppercase">
           Ionut
