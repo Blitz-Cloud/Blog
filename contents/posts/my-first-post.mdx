@@ -1,0 +1,40 @@
+---
+title: You need to stop using port forwarding right NOW !
+published: true
+description: Port forwarding is no longer the best way to expose your home lab projects to the word.
+tags: ["homeLab", "docker", "Cloudflare"]
+cover_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4c65bxtr2rc2pw7ee9z1.png
+# Use a ratio of 100:42 for best results.
+date: 2023-03-06
+---
+
+## TL;DR
+
+In this article I will show an alternative to port forwarding. That offers the same configurability and is even more secure.
+
+## But why you may ask ?
+
+Port forwarding was the way to go from the down of internet to allow inbound traffic from the internet to reach a machine(SSH) or a service on the local network, and will still be, but as tech enthusiastic I can say that the security might not be in the spotlight. But as the history shown us with every opened hole in the firewall comes at risk. You might be wandering how we can mitigate this issues. The obvious option is just not to expose anything to the world. Or to VPN inside your home network might work but with this set up you can expose any of your resources to the word.
+
+## What alternatives do we have to solve all this issues ?
+
+After some research I discovered Cloudflare Argo Tunnels, the big advantage for me is that I can point a tunnel endpoint to one of the many domains or subdomains that i have already associated with my Cloudflare free account. With this service you have full control over your configuration and the security of your applications with the build in SSO platform.
+
+## If this cached your eye Let dive in ...
+
+1.  Go on the Cloudflare Zero Trust [Dashboard](https://one.dash.cloudflare.com) > Access > Tunnels page
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cx3cd7zhq8mrgm4463uh.png)
+2.  And create your first tunnel
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/blp68zs3g67nuhgp5t7e.png)
+3.  Name it
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8uloex0cchmshsngm87f.png)
+4.  Choose your environment and follow the instructions on how to configure
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2hzbdz59n0nwx37dnqff.png)
+5.  Choose your domain and the location of the service you want to host
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tjppwzi63j12ke4conan.png)
+    NOTE: You can also use Tunnels for SSH or RDP.
+6.  Bonus !
+    Cloudflare also provides a VPN service, that can be used to access your home network. To use it you need the [Cloudflare Warp Client](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/download-warp).
+    ![Cloudflare Zero Trust Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/de6dcda21utvzj8y0mt9.png)
+
+To wrap up in this article you saw how to configure a tunnel to expose your self-hosted services for free on the internet that doesn't require any port forwarding and based on my personal experience you could rely on this service as I do for more than a year
