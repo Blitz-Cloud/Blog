@@ -3,7 +3,7 @@ import * as React from "react";
 
 const Seo = ({ title }) => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query SiteMetaData {
       site {
         siteMetadata {
           title
