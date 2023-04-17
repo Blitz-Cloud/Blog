@@ -11,4 +11,12 @@ const Layout = ({ children }) => {
   );
 };
 
+export const Head = () => (
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2702945689260159"
+    crossorigin="anonymous"
+  ></script>
+);
+
 export default Layout;
