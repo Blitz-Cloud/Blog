@@ -41,7 +41,7 @@ const ThemeToggler = () => {
     <button className="" onClick={themeToggle}>
       <div
         id="system_theme"
-        className="mx-3 p-[4px] hover:bg-white/20 hover:fill-white fill-[#94a3b8] rounded-full "
+        className="mx-3 rounded-full fill-[#94a3b8] p-[4px] hover:bg-white/20 hover:fill-white "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const ThemeToggler = () => {
       </div>
       <div
         id="light_btn"
-        className="mx-3 p-[4px]  hover:bg-black/10 fill-black rounded-full hidden"
+        className="mx-3 hidden rounded-full fill-black p-[4px] hover:bg-black/10"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const ThemeToggler = () => {
       </div>
       <div
         id="dark_btn"
-        className="mx-3 p-[4px] fill-[#94a3b8] hover:fill-white hover:bg-white/20  rounded-full hidden"
+        className="mx-3 hidden rounded-full fill-[#94a3b8] p-[4px]  hover:bg-white/20 hover:fill-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

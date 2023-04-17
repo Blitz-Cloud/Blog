@@ -20,16 +20,16 @@ const PostsGrid = () => {
   const nodes = data.allMdx.nodes;
 
   return (
-    <div className="dark:bg-[#0d2739] dark:text-white bg-slate-100 ">
-      <main className="m-auto lg:max-w-[80vw] pt-6 px-4 md:px-16">
+    <div className="bg-slate-100 dark:bg-[#0d2739] dark:text-white">
+      <main className="m-auto px-4 pt-6 md:px-16 lg:max-w-[80vw]">
         {/* Section header */}
         <div className="flex justify-between">
-          <div className="rounded-full my-3 bg-primary inline-block py-1 px-3 uppercase  text-[#f5f5f5]">
+          <div className="my-3 inline-block rounded-full bg-primary px-3 py-1 uppercase text-[#f5f5f5]">
             More Posts
           </div>
           <Link
             to="/blog"
-            className="text-base md:text-lg py-1 px-3 my-3 text-dark  dark:text-[#f5f5f5] dark:fill-[#f5f5f5] fill-dark tracking-wider inline-flex items-center"
+            className="text-dark fill-dark my-3  inline-flex items-center px-3 py-1 text-base tracking-wider dark:fill-[#f5f5f5] dark:text-[#f5f5f5] md:text-lg"
           >
             See all
             <svg
@@ -44,7 +44,7 @@ const PostsGrid = () => {
           </Link>
         </div>
         {/* post grid */}
-        <div className="grid md:grid-cols-2 gap-4 py-4">
+        <div className="grid gap-4 py-4 md:grid-cols-2">
           {nodes.map((node, index) => {
             if (index === 0) {
               return;
@@ -53,10 +53,10 @@ const PostsGrid = () => {
               return (
                 <Link
                   to={"/blog/" + node.frontmatter.slug}
-                  className="font-semibold text-xl bg-gradient-to-r from-indigo-500 to-purple-500   text-white rounded-md py-12 px-4 md:px-16 transition-transform duration-300 ease-in-out hover:-translate-y-1.5"
+                  className="rounded-md bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-12 text-xl font-semibold text-white  transition-transform duration-300 ease-in-out hover:-translate-y-1.5 md:px-16"
                 >
                   {node.frontmatter.title}
-                  <p className="font-normal text-base">
+                  <p className="text-base font-normal">
                     {node.frontmatter.date}
                   </p>
                 </Link>
@@ -65,10 +65,10 @@ const PostsGrid = () => {
               return (
                 <Link
                   to={"/blog/" + node.frontmatter.slug}
-                  className="font-semibold text-xl bg-gradient-to-r  from-purple-500 to-pink-500 text-white rounded-md py-12 px-4 md:px-16 transition-transform duration-300 ease-in-out hover:-translate-y-1.5"
+                  className="rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-12 text-xl font-semibold text-white transition-transform duration-300 ease-in-out hover:-translate-y-1.5 md:px-16"
                 >
                   {node.frontmatter.title}
-                  <p className="font-normal text-base">
+                  <p className="text-base font-normal">
                     {node.frontmatter.date}
                   </p>
                 </Link>

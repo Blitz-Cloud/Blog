@@ -4,10 +4,13 @@ import Seo from "../../components/seo";
 import { graphql } from "gatsby";
 
 const BlogPost = ({ data, children }) => {
+  console.log(data);
   return (
     <Layout>
-      <div className="dark:bg-primary dark:text-white text-start ">
-        <div className="p-4 m-auto md:max-w-[50vw] min-h-[100vh] ">
+      <div className="text-start dark:bg-primary dark:text-white">
+        <div className="prose m-auto min-h-[100vh] p-4 dark:prose-invert md:max-w-[50vw] ">
+          <img src={data.mdx.frontmatter.cover_image} alt="" srcset="" />
+          <h1>{data.mdx.frontmatter.title}</h1>
           {children}
         </div>
       </div>
@@ -21,6 +24,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+        cover_image
       }
     }
   }

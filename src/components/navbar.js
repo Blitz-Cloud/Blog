@@ -4,18 +4,18 @@ import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
   return (
-    <div className="dark:bg-primary dark:text-white bg-white  top-0 sticky ">
-      <nav className="md:max-w-[65vw] m-auto p-3 text-lg md:text-xl flex flex-row justify-between items-center   ">
+    <div className="sticky top-0 bg-white dark:bg-primary dark:text-white">
+      <nav className="m-auto flex flex-row items-center justify-between p-3 text-lg md:max-w-[65vw] md:text-xl">
         <Link to="/" className="uppercase">
           Ionut
         </Link>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <Link className="mx-3 " to="/about">
             About
           </Link>
 
-          <Link className="mx-3 " to="/about">
-            Projects
+          <Link className="mx-3 " to="/blog">
+            Blog
           </Link>
           <ThemeToggler />
         </div>

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 
 const LatestPost = () => {
   const data = useStaticQuery(graphql`
-    query LatestPost {
+    query {
       allMdx(sort: { frontmatter: { date: DESC } }, limit: 1) {
         nodes {
           frontmatter {
@@ -18,24 +18,24 @@ const LatestPost = () => {
   `);
 
   return (
-    <div className="dark:bg-[#0d2739] dark:text-white bg-slate-100 ">
-      <main className="m-auto lg:max-w-[80vw] pt-12 px-4 md:px-16">
-        <div className="rounded-full my-3 bg-primary inline-block py-1 px-3 uppercase  text-[#f5f5f5]">
+    <div className="bg-slate-100 dark:bg-[#0d2739] dark:text-white ">
+      <main className="m-auto px-4 pt-12 md:px-16 lg:max-w-[80vw]">
+        <div className="my-3 inline-block rounded-full bg-primary px-3 py-1 uppercase text-[#f5f5f5] ">
           Latest Post
         </div>
         <div>
-          <h2 className="text-lg md:text-4xl font-bold">
+          <h2 className="text-lg font-bold md:text-4xl">
             {data.allMdx.nodes[0].frontmatter.title}
           </h2>
           <p className="my-4 text-base md:text-lg">
             {data.allMdx.nodes[0].frontmatter.description}
           </p>
-          <p className="my-4 font-normal text-base">
+          <p className="my-4 text-base font-normal">
             {data.allMdx.nodes[0].frontmatter.date}
           </p>
           <Link
             to={"/blog/" + data.allMdx.nodes[0].frontmatter.slug}
-            className="text-base md:text-lg py-1 px-3 rounded-md dark:bg-[#feffbe] bg-[#0aa9ff] text-white  dark:text-black dark:fill-black fill-white tracking-wider inline-flex items-center"
+            className="inline-flex items-center rounded-md bg-[#0aa9ff]  fill-white px-3 py-1 text-base tracking-wider text-white dark:bg-[#feffbe] dark:fill-black dark:text-black md:text-lg"
           >
             Read more
             <svg

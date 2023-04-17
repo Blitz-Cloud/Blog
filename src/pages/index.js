@@ -6,10 +6,10 @@ import LatestPost from "../components/LatestPost";
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <div className="dark:bg-primary dark:text-white text-center">
-        <header className="h-[60vh] md:h-[95vh] p-4 m-auto sm:max-w-[50vw] flex flex-col justify-center items-center">
-          <h1 className="font-Alkatra font-bold text-5xl md:text-6xl my-6 tracking-wider">
+    <Layout title="Home Page">
+      <div className="text-center dark:bg-primary dark:text-white">
+        <header className="m-auto flex h-[60vh] flex-col items-center justify-center p-4 sm:max-w-[50vw] md:h-[95vh]">
+          <h1 className="my-6 font-Alkatra text-5xl font-bold tracking-wider md:text-6xl">
             Hi, I`m Ionut!
           </h1>
           <div className="text-xl">
@@ -20,7 +20,7 @@ const IndexPage = () => {
               I'm passionate about back-end technologies and designing and
               managing linux server.
             </p>
-            <p className="my-3 m-auto sm:max-w-[85%]">
+            <p className="mx-auto my-3 sm:max-w-[85%]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis nisi provident expedita.
             </p>

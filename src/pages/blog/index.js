@@ -8,19 +8,19 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <div className="dark:bg-[#0d2739] min-h-[100vh] dark:text-white bg-slate-100 ">
-        <main className="m-auto lg:max-w-[65vw] pt-6 px-4 lg:px-0">
-          <h1 className="mt-12 mb-8 font-bold text-6xl">Blog</h1>
-          <div className="py-4 font-semibold text-2xl grid md:grid-cols-2 gap-4">
+      <div className="min-h-[100vh] bg-slate-100  dark:bg-[#0d2739] dark:text-white ">
+        <main className="m-auto px-4 pt-6 lg:max-w-[65vw] lg:px-0">
+          <h1 className="mb-8 mt-12 text-6xl font-bold">Blog</h1>
+          <div className="grid gap-4 py-4 text-2xl font-semibold md:grid-cols-2">
             {nodes.map((node, index) => {
               if (!(index % 2)) {
                 return (
                   <Link
                     to={"/blog/" + node.frontmatter.slug}
-                    className="py-6 min-h-[180px] px-4 md:px-8 bg-gradient-to-r from-indigo-500 to-purple-500   text-white rounded-md  transition-transform duration-300 ease-in-out hover:-translate-y-1.5"
+                    className="min-h-[180px] rounded-md bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-8   text-white transition-transform  duration-300 ease-in-out hover:-translate-y-1.5 md:px-8"
                   >
                     {node.frontmatter.title}
-                    <p className="font-normal text-base">
+                    <p className="text-base font-normal">
                       {node.frontmatter.date}
                     </p>
                   </Link>
@@ -29,10 +29,10 @@ const BlogPost = ({ data }) => {
                 return (
                   <Link
                     to={"/blog/" + node.frontmatter.slug}
-                    className="py-6 min-h-[180px] px-4 md:px-8 bg-gradient-to-r  from-purple-500 to-pink-500 text-white rounded-md  transition-transform duration-300 ease-in-out hover:-translate-y-1.5"
+                    className="min-h-[180px] rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-8 text-white transition-transform  duration-300 ease-in-out hover:-translate-y-1.5 md:px-8"
                   >
                     {node.frontmatter.title}
-                    <p className="font-normal text-base">
+                    <p className="text-base font-normal">
                       {node.frontmatter.date}
                     </p>
                   </Link>
