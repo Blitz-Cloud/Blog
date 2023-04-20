@@ -3,8 +3,24 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import PostsGrid from "../components/PostsGrid";
 import LatestPost from "../components/LatestPost";
+import {useStaticQuery, graphql} from "gatsby"
 
 const IndexPage = () => {
+    const data = useStaticQuery(graphql`
+      query LatestPosts {
+        allMdx(sort: { frontmatter: { date: DESC } }, limit: 4, skip: 1) {
+          nodes {
+            frontmatter {
+              date(formatString: "MMMM D, YYYY")
+              title
+              slug
+            }
+          }
+        }
+      }
+    `);
+    const posts = data.allMdx.nodes;
+    console.log(posts)
   return (
     <Layout title="Home Page">
       <div className="text-center dark:bg-primary dark:text-white">
@@ -28,7 +44,7 @@ const IndexPage = () => {
         </header>
       </div>
       <LatestPost />
-      <PostsGrid />
+      <PostsGrid posts={posts} />
     </Layout>
   );
 };
