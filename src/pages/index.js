@@ -66,9 +66,8 @@ const IndexPage = () => {
                 </svg>
               </Link>
             </div>
+            <PostsGrid posts={posts} />
           </main>
-
-          <PostsGrid posts={posts} />
         </div>
       </div>
     </Layout>

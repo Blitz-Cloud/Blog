@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 
 const PostsGrid = ({ posts }) => {
   return (
-    <div className="m-auto px-4 pt-6 md:px-16 lg:max-w-[80vw]">
+    <div className="m-auto  lg:max-w-[80vw]">
       {/* post grid */}
       <div className="grid gap-4 py-4 text-2xl font-semibold md:grid-cols-2 ">
         {posts.map((post, index) => {
