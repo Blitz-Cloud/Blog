@@ -1,0 +1,14 @@
+name: deploy-dev-branch
+on:
+    push:
+        branches:
+            - dev
+jobs:
+    deploy:
+        runs-on: self-hosted
+        steps:
+            - uses: actions/checkout@v2
+            - name: Deploy to dev
+              run: |
+                  echo "Deploying to dev"
+                  echo "Deployed to dev"
