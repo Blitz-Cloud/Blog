@@ -8,12 +8,8 @@ jobs:
         runs-on: self-hosted
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: 20.1.1
-            - name: Install dependencies
-              run: | 
-                  npm install
+            - run: nvm use 20.1.0
+            - run: npm install
             - name: Deploy
               run: |
                   gatsby build
