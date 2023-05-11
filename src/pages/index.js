@@ -34,7 +34,7 @@ const IndexPage = () => {
             </p>
             <p className="m-auto sm:max-w-[90%]">
               I'm passionate about back-end technologies and designing and
-              managing linux server.
+              managing linux server.lo
             </p>
             <p className="mx-auto my-3 sm:max-w-[85%]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
